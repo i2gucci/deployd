@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deployd - AI Solana Launchpad Assistant</title>
+    <link rel="icon" type="image/png" href="deploydtransparent.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- CA Banner -->
+    <div class="ca-banner">
+        <span class="ca-label">CA:</span>
+        <span class="ca-text">coming soon</span>
+        <button class="ca-copy" onclick="copyCa()" aria-label="Copy contract address">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="deploydtransparent.png" alt="deployd" class="logo-icon" width="50">
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#faq">FAQ</a>
+                <a href="/docs/" class="btn-primary">Documentation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">
+            The Uxento & Rapid Launch Killer
+        </div>
+        <div class="hero-icon">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="25" width="60" height="50" rx="6" fill="#f0f4ff" stroke="#2563eb" stroke-width="2.5"/>
+                <circle cx="50" cy="50" r="16" fill="#2563eb"/>
+                <path d="M44 50L48 54L56 46" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="30" y="15" width="40" height="4" rx="2" fill="#2563eb"/>
+                <circle cx="35" cy="17" r="1.5" fill="#60a5fa"/>
+                <circle cx="65" cy="17" r="1.5" fill="#60a5fa"/>
+            </svg>
+        </div>
+        <h1 class="hero-title">
+            AI-Powered Token Deployment<br>
+            <span class="highlight">Built for Solana Agents</span>
+        </h1>
+        <p class="hero-subtitle">
+            Programmatic token launches on Pump.fun & Bonk. Automated reward claiming. Zero manual intervention required.
+        </p>
+        <div class="hero-buttons">
+            <a href="/docs/" class="btn-primary btn-large">Documentation</a>
+            <a href="https://x.com/deployd" target="_blank" class="btn-secondary btn-large">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.480 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+                Follow on X
+            </a>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section class="quick-start">
+        <div class="quick-start-container">
+            <h2 class="quick-start-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                    <polyline points="4 17 10 11 4 5"></polyline>
+                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                Quick Start
+            </h2>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-tab active">One-liner</span>
+                    <span class="terminal-tab">X / Twitter</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-comment"># Launch tokens with AI. Instant setup. Solana ready. 🚀</div>
+                    <div class="terminal-command">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-text">iwr -useb https://deployd.fun/install.ps1 | iex</span>
+                        <button class="copy-button" onclick="copyToClipboard('start trading')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="quick-start-description">
+                Cross-platform deployment. Execute from any environment with agent access.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">Complete Launchpad <span class="highlight">Automation Suite</span></h2>
+        <p class="section-subtitle">
+            Full-stack token deployment infrastructure. From launch to liquidity management.
+        </p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Launch</h3>
+                <p class="feature-description">
+                    Instant deployment on Pump.fun and Bonk. Bonding curve configuration, liquidity provisioning, metadata management.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                        <line x1="2" y1="10" x2="22" y2="10"></line>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Manage</h3>
+                <p class="feature-description">
+                    Real-time monitoring across platforms. Bonding curve analytics, holder tracking, automated reward collection.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Rewards</h3>
+                <p class="feature-description">
+                    Automatic creator fee aggregation. Revenue tracking, batch claiming, multi-token reward optimization.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Liquidity</h3>
+                <p class="feature-description">
+                    Bonding curve optimization. Liquidity pool management. Raydium graduation orchestration.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <h2 class="section-title">Deployment <span class="highlight">Protocol</span></h2>
+        <p class="section-subtitle">
+            Three-step execution sequence. Agent-to-launchpad integration.
+        </p>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">01</div>
+                <div class="step-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
+                </div>
+                <h3 class="step-title">Initialize Agent</h3>
+                <p class="step-description">
+                    Execute deployment command. Agent establishes connection to Pump.fun/Bonk APIs. Wallet authentication via secure keypair.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <div class="step-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </div>
+                <h3 class="step-title">Define Parameters</h3>
+                <p class="step-description">
+                    Token metadata specification. Supply allocation, bonding curve config, liquidity targets. Platform-specific rule validation.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <div class="step-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3 class="step-title">Execute & Monitor</h3>
+                <p class="step-description">
+                    Transaction broadcast to Solana network. Real-time bonding curve monitoring. Automated reward claiming on threshold trigger.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <h2 class="section-title">Technical <span class="highlight">Documentation</span></h2>
+        <p class="section-subtitle">
+            Common implementation queries. See full docs for integration details.
+        </p>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What APIs does deployd interface with?</span>
+                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>deployd integrates with Pump.fun and Bonk launchpad APIs for token deployment, Solana RPC endpoints for transaction broadcast, and Raydium for liquidity pool creation post-graduation. Full API specifications in documentation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Required dependencies for agent integration?</span>
+                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Node.js 18+, Solana Web3.js SDK, wallet keypair with sufficient SOL for transaction fees. Cross-platform compatible (Windows/macOS/Linux). Installation via npm initializes all required dependencies.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Transaction fee structure?</span>
+                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Zero platform fees. Pay only Solana network fees (~0.000005 SOL/tx) and launchpad-specific fees (Pump.fun: 1% trading fee, Bonk: variable). Creator rewards accrue automatically based on platform terms.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Supported token standards and networks?</span>
+                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Solana SPL tokens only. Pump.fun and Bonk platform compliance enforced. Automatic bonding curve deployment, DEX graduation to Raydium upon market cap threshold. Custom metadata via Metaplex standard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="/" class="footer-brand">
+                <img src="deploydtransparent.png" alt="deployd" class="footer-logo" width="100">
+            </a>
+            <p class="footer-copyright">2026 deployd. All rights reserved.</p>
+            <a href="https://x.com/deployd" class="footer-social" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+                @deployd
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
